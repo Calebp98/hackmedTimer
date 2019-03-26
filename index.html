@@ -24,7 +24,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="dna-1811955_1920.jpg">
+				<section data-background="bacteria-3662695_1920.jpg">
 
 <!-- timer -->
 <h2 id="title">Hacking ends in ...</h2>
@@ -35,6 +35,16 @@
 <h4 id="message">Something may happen in a bit, watch this space!</h4>
 
 <script>
+
+// function for monospace effect
+function pad(number, length) {
+    var str = '' + number;
+    while (str.length < length) {
+        str = '0' + str;
+    }
+    return str;
+}
+
 // Set the date we're counting down to
 var countDownDate = new Date("Mar 30, 2019 11:30:00").getTime();
 
@@ -54,10 +64,9 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  // + minutes + "m " + seconds + "s ";
-	document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-	+ minutes + "m ";
+  document.getElementById("demo").innerHTML = pad(days,2) + "d " + pad(hours,2) + "h "
+  + pad(minutes,2) + "m " + pad(seconds,2) + "s ";
+
 
 	// Updating messages
 	if(days>=10 & days<12 ){
