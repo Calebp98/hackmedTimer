@@ -11,6 +11,7 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<meta http-equiv="refresh" content="300">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -19,6 +20,10 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+			setInterval(function() {
+                  window.location.reload();
+                }, 300000); 
 		</script>
 	</head>
 	<body>
