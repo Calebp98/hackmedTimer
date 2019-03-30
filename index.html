@@ -92,12 +92,17 @@ var x = setInterval(function() {
 	}else if(days==0){
 		if(hours<=24 & hours>=23){
 			document.getElementById("message").innerHTML = "🎉🎉 Start hacking 🎉🎉"
-		}	else	if(hours>=22 & hours<=23 ){
+		}					else if(hours>=22 & hours<=23 & minutes<30){
+							document.getElementById("message").innerHTML = "🥪 It's almost lunch time!! 🥪"
+
+						}
+						else	if(hours>=22 & hours<=23 ){
 					document.getElementById("message").innerHTML = "nexmo workshop in LT07, be there or be ◻️ "
 				}
-				else	if(hours>=22 & hours<=23 & minutes<50){
+				else if(hours>=22 & hours<=23 & minutes<50){
 							document.getElementById("message").innerHTML = "nexmo workshop in LT07, be there or be ◻️ "
 						}
+
 	}
 
   // If the count down is finished, write some text
