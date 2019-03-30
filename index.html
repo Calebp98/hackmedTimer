@@ -77,15 +77,21 @@ var x = setInterval(function() {
 	if(days>=10 & days<12 ){
 		document.getElementById("message").innerHTML = "test case: days left between 10 and 12"
 	}else if(days==1){
-		if(hours<=2){
-			document.getElementById("message").innerHTML = "Are you registered? If not ask a lanyard person (organiser), we are super contactable over slack: tinyurl.com/medtech-slack 🔌"
+		if(hours<=2 & minutes > 30){
+			document.getElementById("message").innerHTML = "Are you registered? If not ask a lanyard person (organiser), we are super contactable over slack: tinyurl.com/medtech-slack"
+		}
+		else if(hours<=2 & minutes<30){
+			document.getElementById("message").innerHTML = "opening ceremony starts soon 🎉🎉 we will be in lt04 downstairs"
 		}
 	}else if(days==0){
 		if(hours<=24 & hours>=23){
 			document.getElementById("message").innerHTML = "🎉🎉 Start hacking 🎉🎉"
-		}	else	if(hours<=23 & hours>=23){
+		}	else	if(hours<=22 & hours>=23 & minutes<50){
 					document.getElementById("message").innerHTML = "nexmo workshop in LT07, be there or be ◻️ "
 				}
+				else	if(hours<=22 & hours>=23 & minutes<50){
+							document.getElementById("message").innerHTML = "nexmo workshop in LT07, be there or be ◻️ "
+						}
 	}
 
   // If the count down is finished, write some text
