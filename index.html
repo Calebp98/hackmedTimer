@@ -77,10 +77,8 @@ var x = setInterval(function() {
 	if(days>=10 & days<12 ){
 		document.getElementById("message").innerHTML = "test case: days left between 10 and 12"
 	}else if(days==1){
-		if(true){
-			document.getElementById("message").innerHTML = " 🍜 Keep going, we will be fooding in a short while 🍜"
-		}
-		else if(hours>2){
+
+		 if(hours>2){
 			document.getElementById("message").innerHTML = "Are you registered? If not ask a lanyard person (organiser), we are super contactable over slack: tinyurl.com/medtech-slack"
 		}
 		else if(hours<=2 & minutes > 30){
@@ -94,6 +92,9 @@ var x = setInterval(function() {
 		}
 	}else if(days==0){
 		if(true){
+			document.getElementById("message").innerHTML = " 🍜 Keep going, we will be fooding in a short while 🍜"
+		}
+		else if(true){
 			document.getElementById("message").innerHTML = "ethical hacking workshop (at 14:30), go and hack ethically 🤩"
 		}
 		else if(true){
