@@ -142,8 +142,9 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
+		document.getElementById("title").innerHTML = "";
     document.getElementById("demo").innerHTML = "STOP HACKING! 🎉🎉";
-		document.getElementById("message").innerHTML = "we can't wait to see what you have built 🧰";
+		document.getElementById("message").innerHTML = "we can't wait to see what you have built 💡🧱🔧";
 
   }
 }, 1000);
